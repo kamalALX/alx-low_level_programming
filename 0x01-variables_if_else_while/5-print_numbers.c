@@ -1,23 +1,24 @@
 #include<stdio.h>
 
 /**
- * main - Entry point
+ * main - entry point
  *
- * Description: print all  single digit numbers starting from zero
+ * Description: print all single digit numbers starting from zerp
  *
  * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-	int num = 0;
+	int n = 0;
 
-	while (num <= 9)
+	while (n <= 9)
 	{
-		putchar(num);
-		++num;
+		printf("%i", n);
+		n++;
 	}
-	putchar('\n');
+	printf("\n");
 
 	return (0);
 }
+
