@@ -3,8 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: print 0-9 using putchar
- *              while using int variable
+ * Description: prints all single digit numbers
  *
  * Return: Always 0 (Success)
 */
@@ -15,9 +14,8 @@ int main(void)
 
 	while (num <= 9)
 	{
-		
 		putchar(num + '0');
-		++num;
+		num++;
 	}
 	putchar('\n');
 
