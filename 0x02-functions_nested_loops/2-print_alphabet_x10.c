@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * Print alphabet 10 times - uding function
+ * print_alphabet_x10 - nusted function that prints
+ *				alphabet x10 times
 */
 
 void print_alphabet_x10(void)
