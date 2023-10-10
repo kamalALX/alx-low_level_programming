@@ -1,6 +1,9 @@
-#ifndef MYHEADERS_H
-#define MYHEADERS_H
+#ifndef MAIN_H
+#define MAIN_H
 
-int main(void);
+#include <stdio.h>	
+int _putchar(char c);
+void print_alphabet(void);
+
 
 #endif
