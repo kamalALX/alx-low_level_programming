@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * isalpha - checks if a character is either lower
+ * _isalpha - checks if a character is either lower
  *				or upper case
  *
  * @c: input of the function
