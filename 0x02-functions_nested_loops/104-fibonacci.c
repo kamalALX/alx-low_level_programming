@@ -36,7 +36,7 @@ int main(void)
 		C2 = C2 + B2;
 		B2 = C2 - B2;
 	}
-	putchar("\n");
+	putchar('\n');
 
 	return (0);
 }
