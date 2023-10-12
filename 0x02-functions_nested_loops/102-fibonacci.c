@@ -2,25 +2,23 @@
 /**
  * main - entry point
  *
- * Description: a function that calculate
- *		the sume of all multiples of 5 & 3
- *	to limit of1024
- * Return: 0
- */
-
+ * Description: print the first 50 Fibonacci numbers,
+ *		starting with 1 and 2
+ * Return: 0 success
+*/
 int main(void)
 {
-	int set, n1 = 1, n2 = 2, sum;
+	long int n, i = 1, j = 1, sum;
 
-	printf("%d, %d, ", n1, n2);
-
-	for (set = 1; set <= 48; set++)
+	printf("%ld", i);
+	for (n = 1; n < 50; ++n)
 	{
-		sum = n1 + n2;
-		n1 = n2;
-		n2 = sum;
-		printf("%d", sum);
-		printf(", ");
+		sum = i + j;
+		printf(", %ld", sum);
+		i = j;
+		j = sum;
 	}
+	printf("\n");
+
 	return (0);
 }
