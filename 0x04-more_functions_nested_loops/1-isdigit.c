@@ -2,6 +2,7 @@
 /**
  * _isdigit - function that checks if c is a digit.
  *
+ * @c: input
  * Return: 1 is c is digit
  *		retuen 0 otherwise.
  */
