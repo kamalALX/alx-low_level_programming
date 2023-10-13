@@ -4,7 +4,6 @@
  * main - entry point
  *
  * Description: print numbers from 1 to 100 for multiples of 3 print Fizz,
- *		for multiples of 5 print Buzz for multiples of both print FizzBuzz.
  *
  * Return: 0 (success)
  */
