@@ -3,14 +3,14 @@
 /**
  * print_diagonal - entry point
  *
- * @n: input
+ * @n: integer input
  *
- * Description: write a diagonal line in the terminal.
+ * Description : write a diagonal line in the terminal.
 */
 
 void print_diagonal(int n)
 {
-	int symbole, space;
+	int i, j;
 
 	if (n == 0 && n <= 0)
 	{
@@ -18,9 +18,9 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		for (symbole = 0; symbole < n; symbole++)
+		for (i = 0; i < n; i++)
 		{
-			for (space = 0; space < symbole; space++)
+			for (j = 0; j < i; j++)
 			{
 			_putchar(' ');
 			}
