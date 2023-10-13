@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - entry point
@@ -22,8 +22,8 @@ int main(void)
 		else if (n % 3 == 0 && n % 5)
 			printf("FizzBuzz");
 		else
-			_putchar(n);
+			putchar(n);
 	}
-	_putchar('\n');
+	putchar('\n');
 	return (0);
 }
