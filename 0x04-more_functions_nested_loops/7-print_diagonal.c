@@ -6,8 +6,7 @@
  * @n: input
  *
  * Description: write a diagonal line in the terminal.
- */
-
+*/
 
 void print_diagonal(int n)
 {
