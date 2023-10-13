@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * print_diagonal - printing lines diagonal
+ * print_diagonal - entry point
  *
  * @n: input
+ *
+ * Description: write a diagonal line in the terminal.
  */
 
 
