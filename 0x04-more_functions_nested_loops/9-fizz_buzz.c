@@ -22,8 +22,9 @@ int main(void)
 		else if (n % 3 == 0 && n % 5)
 			printf("FizzBuzz");
 		else
-			putchar(n);
+			printf("%i", n);
+		printf(" ");
 	}
-	putchar('\n');
+	printf("\n");
 	return (0);
 }
