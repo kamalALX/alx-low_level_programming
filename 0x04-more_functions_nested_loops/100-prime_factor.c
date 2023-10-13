@@ -18,5 +18,5 @@ int main(void)
 		}
 	}
 	printf("%ld\n", fact);
-	   return (0);
+	return (0);
 }
