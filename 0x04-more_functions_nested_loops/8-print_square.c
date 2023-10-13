@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_diagonal - entry point
+ * print_square - entry point
  * @size: input
  * Description : a function that prints a square..
 */
