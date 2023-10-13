@@ -4,8 +4,8 @@
  * print_number - a function that print an integer
  * @n:input
  * Return : 0 (success)
-*/
-void print_number(int n)
+ */
+void print_number(int n)igned int x;
 {
 	unsigned int i;
 
@@ -14,12 +14,13 @@ void print_number(int n)
 		i = -n;
 		_putchar ('-');
 	}
-	else if
+	else
 	{
 		i = n;
+
 	}
 
-	else (i / 10)
+	if (i / 10)
 	{
 		print_number(i / 10);
 	}
