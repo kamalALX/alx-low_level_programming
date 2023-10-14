@@ -5,24 +5,17 @@
  * @n:input
  * Return : 0 (success)
  */
-void print_number(int n)igned int x;
+void print_number(int n)
 {
-	unsigned int i;
+	unsigned int j = n;
 
 	if (n < 0)
 	{
-		i = -n;
-		_putchar ('-');
-	}
-	else
-	{
-		i = n;
-
+		_putchar('-');
+		j = -j;
 	}
 
-	if (i / 10)
-	{
-		print_number(i / 10);
-	}
-	_putchar((i % 10) + '0');
+	if ((j / 10) > 0)
+		print_number(j / 10);
+	_putchar((j % 10) + 48);
 }
