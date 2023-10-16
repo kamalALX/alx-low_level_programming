@@ -15,7 +15,7 @@ void puts2(char *str)
 	{
 		n++;
 	}
-	length = n;
+	length = n - 1;
 
 	i = 0;
 
