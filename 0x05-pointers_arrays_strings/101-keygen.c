@@ -20,7 +20,7 @@ int main(void) {
 	arr[n - 1] = '\0';
 
 	for (i = 0; arr[i] != '\0'; i++) {
-		putchar(arr[i] + 48);
+		putchar(arr[i]);
 	}
 
 	return 0;
