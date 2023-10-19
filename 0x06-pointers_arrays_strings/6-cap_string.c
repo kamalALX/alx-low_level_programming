@@ -28,6 +28,6 @@ char *cap_string(char *s)
 			}
 		}
 	}
-	s[i + 1] = '\0';
+	s[i - 1] = '\0';
 	return (s);
 }
