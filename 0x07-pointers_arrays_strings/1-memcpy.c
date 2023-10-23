@@ -3,9 +3,11 @@
 /**
  * *_memcpy - unction that copies memory area.
  *
- * @dest: input
- * @src: input
- * @n: input
+ * @dest: area where bytes are copied to
+ * @src: area where bytes are copied from
+ * @n: number of bytes to copy
+ *
+ * Return: returns a pointer to dest
 */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
@@ -16,5 +18,5 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	{
 		dest[i] = src[i];
 	}
-	return (dest - 50);
+	return (dest);
 }
