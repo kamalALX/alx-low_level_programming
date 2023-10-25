@@ -1,4 +1,4 @@
-#ifndef MAIN_H
+fndef MAIN_H
 #define MAIN_H
 
 #include <unistd.h>
@@ -22,5 +22,4 @@ int is_prime(int n, int start);
 int find_strlen(char *s);
 int check_palindrome(char *s, int len, int index);
 
-#endif /* MAIN_H */#ifndef MAIN_H
-#define MAIN_H
+#endif /* MAIN_H */
