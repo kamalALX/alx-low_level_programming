@@ -28,15 +28,15 @@ char *str_concat(char *s1, char *s2)
 		l1++;
 		l2++;
 	}
-	p = (char *) malloc(sizeof(char) * (l1 + l2 + 1));
+	p = (char *) malloc(sizeof(char) * (l1));
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i <= (l1 + l2 + 1); i++)
+	for (i = 0; i <= (l1); i++)
 	{
 		p[i] = s1[i];
 		if (p[i] == '\0')
 		{
-			for (j = 0 ; i <= (l1 + l2 + 1); i++, j++)
+			for (j = 0 ; i <= (l1); i++, j++)
 				p[i] = s2[j];
 		}
 	}
