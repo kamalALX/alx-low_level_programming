@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * create_array - function that returns a pointer to
+ * _strdup - function that returns a pointer to
  *		a newly allocated space in memory,
  *		which contains a copy of the string given as a parameter.
  *
@@ -23,7 +23,7 @@ char *_strdup(char *str)
 	{
 		l++;
 	}
-	p = (char*) malloc(sizeof(char) * l);
+	p = (char *) malloc(sizeof(char) * (l + 1);
 	if (p == NULL)
 		return (NULL);
 	for (i = 0; i <= l; i++)
