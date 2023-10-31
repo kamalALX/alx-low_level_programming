@@ -7,6 +7,8 @@
  * Return: pointer to the array of splitted words
  */
 
+int length(char *str);
+int word_count(char *str);
 char **strtow(char *str)
 {
 	char **p;
