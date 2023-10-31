@@ -2,49 +2,100 @@
 
 /**
  * strtow - splits a stirng into words
- *
- * @str: input
+ * @str: string to be splitted
  *
  * Return: pointer to the array of splitted words
  */
 
 char **strtow(char *str)
 {
-	int i, wc = 0;
 	char **p;
-	char *words;
-	char *r = *p;
+	int i, j = 0, tem = 0, sz = 0, words = word_count(str);
 
-	if (str == NULL || str == (""))
+	if (words == 0)
 		return (NULL);
-
-	while (*str != '\0')
+	p = (char **) malloc(sizeof(char *) * (words + 1));
+	if (p != NULL)
 	{
-		while (*str == ' ' || *str == '\t')
-			str++;
-		if (str != '\0')
+		for (i = 0; i <= length(str) && words; i++)
 		{
-			wc++;
-			while (*str != ' ' && *str != '\t' && *str != '\0')
-				str++;
-		}
-		p = (char **) malloc(sizeof(char) * (wc + 1));
-		if (words == NULL)
-			return (NULL);
-		while (*str != '\0')
-		{
-			while (*str == ' ' || *str == '\t')
-				str++;
-			while (*str != ' ' && *str != '\t' && *str != '\0')
+			if ((str[i] != ' ') && (str[i] != '\0'))
+				sz++;
+			else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 			{
-				**p = *str;
-				str++;
-				p++;
+				p[j] = (char *) malloc(sizeof(char) * sz + 1);
+				if (p[j] != NULL)
+				{
+					while (tem < sz)
+					{
+						p[j][tem] = str[(i - sz) + tem];
+						tem++;
+					}
+					p[j][tem] = '\0';
+					sz = tem = 0;
+					j++;
+				}
+				else
+				{
+					while (j-- >= 0)
+						free(p[j]);
+					free(p);
+					return (NULL);
+				}
 			}
-			words = (char *)malloc(sizeof(char) * (wc + 1));
-			if (words == NULL)
-				return (NULL);
 		}
-		return (r);
+		p[words] = NULL;
+		return (p);
+	}
+	else
+		return (NULL);
 }
 
+
+/**
+ * word_count - counts the number of words in str
+ * @str: string to be used
+ *
+ * Return: number of words
+ */
+int word_count(char *str)
+{
+	int i = 0, words = 0;
+
+	while (i <= length(str))
+	{
+		if ((str[i] != ' ') && (str[i] != '\0'))
+		{
+			i++;
+		}
+		else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+		{
+			words += 1;
+			i++;
+		}
+		else
+		{
+			i++;
+		}
+	}
+	return (words);
+}
+
+/**
+ * length - returns length of str
+ * @str: string to be counted
+ *
+ * Return: length of the string
+ */
+
+int length(char *str)
+{
+	int len = 0;
+
+	if (str != NULL)
+	{
+		while (str[len])
+			len++;
+	}
+	return (len);
+}
