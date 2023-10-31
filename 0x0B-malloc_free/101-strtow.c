@@ -1,7 +1,7 @@
-#:normal! ggVG=include "main.h"
+#include "main.h"
 
 /**
- * alloc_grid - splits a stirng into words
+ * strtow - splits a stirng into words
  *
  * @str: input
  *
@@ -30,7 +30,7 @@ char **strtow(char *str)
 		}
 		p = (char **) malloc(sizeof(char) * (wc + 1));
 		if (words == NULL)
-			return NULL;
+			return (NULL);
 		while (*str != '\0')
 		{
 			while (*str == ' ' || *str == '\t')
@@ -43,11 +43,8 @@ char **strtow(char *str)
 			}
 			words = (char *)malloc(sizeof(char) * (wc + 1));
 			if (words == NULL)
-				return NULL;
-			_strncpy(words, p, str - p);
-			words[str - p] = '\0';
-			words[i] = words;
-			i++;
+				return (NULL);
 		}
 		return (r);
 }
+
