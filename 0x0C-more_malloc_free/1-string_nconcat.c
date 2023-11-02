@@ -26,19 +26,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 ="";
-	else
-	{
-		for (i = 0, j = 0; i < length; i++, j++)
-		{
-			if (s1[j] != '\0')
-				p[i] = s1[j];
-			else
-			{
-				for (j = 0; j <= n; j++, i++)
-					p[i] = s2[j];
-			}
-		}
-	}
+	for (i = 0, j = 0; s1[j]; i++, j++)
+		p[i] = s1[j];
+
+	for (j = 0; s2[j] && j < n; i++, j++)
+		p[i] = s2[j];
 	p[length] = '\0';
 	return (p);
 }
