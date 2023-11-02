@@ -65,7 +65,7 @@ void check_int(int argc, char *argv[])
  * Return: returns the transfomed string int.
 */
 
-unsigned int _atoi(char *s)
+int _atoi(char *s)
 {
 	unsigned int sum = 0;
 	int i = 0;
