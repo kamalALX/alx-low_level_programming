@@ -23,7 +23,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (p == NULL)
 		return (NULL);
 	if (s1[0] == '\0' || s2[0] == '\0')
-		p[0] = ("");
+		s1 = "", s2 = "";
 	else
 	{
 		for (i = 0; i < length; i++)
