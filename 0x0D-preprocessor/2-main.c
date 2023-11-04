@@ -1,6 +1,10 @@
 #include <stdio.h>
 
-#define __FILE__
+#define __FILE_
+
+/**
+ * main - entry point
+*/
 
 void main(void)
 {
