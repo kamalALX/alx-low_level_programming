@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+void __attribute__((constructor)) before_main(void);
 /**
  * before_main - a function that prints a string
  *		befor the main function is executed.
