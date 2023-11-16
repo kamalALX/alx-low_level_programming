@@ -21,7 +21,7 @@ list_t *add_node(list_t **head, const char *str)
 	dupl = strdup(str);
 	if (dupl == NULL)
 	{
-		free(dupl);
+		free(newmode);
 		return (NULL);
 	}
 	for (length = 0; str[length];)
