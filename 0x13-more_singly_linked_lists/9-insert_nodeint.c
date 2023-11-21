@@ -45,6 +45,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	return (newnode);
 }
 
+/**
+ * listint_len - a function that calculate the number of nodes in a list.
+ * @h: pointer to the list
+ *
+ * Return: number of nodes.
+*/
+
 size_t listint_len(const listint_t *h)
 {
 	const listint_t *cursor = h;
