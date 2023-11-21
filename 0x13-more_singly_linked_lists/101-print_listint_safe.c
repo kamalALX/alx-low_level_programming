@@ -27,7 +27,8 @@ listint_t *has_loop(listint_t *head)
 }
 
 /**
- * print_listint_safe - a function that prints a linked list, even if it has a loop
+ * print_listint_safe - a function that prints a linked list,
+ *			even if it has a loop.
  * @head: pointer to the head of the list.
  *
  * Return: number of nodes in the list.
