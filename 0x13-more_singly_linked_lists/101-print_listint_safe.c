@@ -1,10 +1,12 @@
 #include "lists.h"
 
 /**
- *  * print_listint_safe - Prints a listint_t linked list safely.
- *   * @head: A pointer to a singly linked list node structure.
- *    * Return: The number of nodes in the list.
- *    */
+ * print_listint_safe - Prints a listint_t linked list safely.
+ * @head: A pointer to a singly linked list node structure.
+ *
+ * Return: The number of nodes in the list.
+*/
+
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t count = 0;
