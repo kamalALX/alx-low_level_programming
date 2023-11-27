@@ -30,7 +30,7 @@ void close_o(int fd)
 {
 	int fid = close(fd);
 
-	if (fd == -1)
+	if (fid == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
 		exit(100);
