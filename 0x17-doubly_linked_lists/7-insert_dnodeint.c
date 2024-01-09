@@ -9,21 +9,6 @@
  * Return: : the address of the new node, or NULL if it failed
  */
 
-size_t dlistint_len1(dlistint_t *h)
-{
-	int count = 0;
-
-	if (h == NULL)
-		return (count);
-
-	while (h)
-	{
-		count++;
-		h = h->next;
-	}
-	return (count);
-}
-
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *newnode;
@@ -37,7 +22,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	if (idx == 0)
 		newnode = add_dnodeint(h, n);
 	if (idx > len)
-		return (*h);
+		return (NULL);
 	else
 	{
 		while ((*h) != NULL)
