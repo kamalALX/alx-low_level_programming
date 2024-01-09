@@ -48,8 +48,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		*head = NULL;
 		return (1);
 	}
-	else if (index > len)
-		return (-1);
 	else if (len == 0)
 		return (-1);
 	else
