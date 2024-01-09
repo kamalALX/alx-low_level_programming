@@ -5,7 +5,7 @@
  *				a linked list
  * @h: pointer to the list
  * Return: length of the list
-*/
+ */
 
 size_t dlistint_len(const dlistint_t *h)
 {
@@ -29,42 +29,47 @@ size_t dlistint_len(const dlistint_t *h)
  * @head: pointer to the head of the list
  * @index: index of the node to delete
  * Return: 1 if it succeeded, -1 if it failed
-*/
+ */
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	unsigned int i = 0;
-	unsigned int len = dlistint_len(*head);
+	dlistint_t *h1;
+	dlistint_t *h2;
+	unsigned int i;
 
-	if (*head)
-	{
-		while ((*head)->prev)
-			*head = (*head)->prev;
-	}
+	h1 = *head;
 
-	if (len == 1)
+	if (h1 != NULL)
+		while (h1->prev != NULL)
+			h1 = h1->prev;
+
+	i = 0;
+
+	while (h1 != NULL)
 	{
-		free(*head);
-		*head = NULL;
-		return (1);
-	}
-	else if (len == 0)
-		return (-1);
-	else
-	{
-		while (*head)
+		if (i == index)
 		{
-			if (i == index)
+			if (i == 0)
 			{
-				if ((*head)->prev)
-					((*head)->prev)->next = (*head)->next;
-				((*head)->next)->prev = (*head)->prev;
-				*head = (*head)->next;
-				return (1);
+				*head = h1->next;
+				if (*head != NULL)
+					(*head)->prev = NULL;
 			}
-			i++;
-			*head = (*head)->next;
+			else
+			{
+				h2->next = h1->next;
+
+				if (h1->next != NULL)
+					h1->next->prev = h2;
+			}
+
+			free(h1);
+			return (1);
 		}
+		h2 = h1;
+		h1 = h1->next;
+		i++;
 	}
+
 	return (-1);
 }
