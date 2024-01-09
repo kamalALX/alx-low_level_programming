@@ -1,23 +1,15 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index -  function that inserts a new node
- *					at a given position.
- * @h: pointer tothe head of the node
- * @idx: the position
- * @n: data of the new node
- * Return: : the address of the new node, or NULL if it failed
- */
+ * dlistint_len1 - calculate the length od linked list
+ * @h: pointer to the linked list
+ * Return: length of the list
+*/
 
-size_t dlistint_len1(dlistint_t *h)
+size_t dlistint_len1(const dlistint_t *h)
 {
 	int count = 0;
 
-	if (h)
-	{
-		while (h->prev)
-			h = h->prev;
-	}
 	if (h == NULL)
 		return (count);
 
@@ -29,20 +21,30 @@ size_t dlistint_len1(dlistint_t *h)
 	return (count);
 }
 
+/**
+ * insert_dnodeint_at_index -  function that inserts a new node
+ *					at a given position.
+ * @h: pointer tothe head of the node
+ * @idx: the position
+ * @n: data of the new node
+ * Return: : the address of the new node, or NULL if it failed
+ */
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *newnode;
 	unsigned int index = 1;
-	unsigned int len = dlistint_len1(*h);
+	unsigned int len;
 
 	newnode = NULL;
 	if (*h != NULL)
 		while ((*h)->prev != NULL)
 			*h = (*h)->prev;
-	if (idx == 0)
-		newnode = add_dnodeint(h, n);
+	len = dlistint_len1(*h);
 	if (idx > len)
 		return (NULL);
+	if (idx == 0)
+		newnode = add_dnodeint(h, n);
 	else
 	{
 		while ((*h) != NULL)
