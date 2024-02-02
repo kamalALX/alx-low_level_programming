@@ -11,18 +11,24 @@
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int idx =  key_index((const unsigned char *)key, ht->size);
+	unsigned long int idx;
 	hash_node_t *node = NULL;
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (NULL);
 
+	idx = key_index((const unsigned char *)key, ht->size);
 	if (idx >= ht->size)
 		return (NULL);
 
 	node = ht->array[idx];
-	while (node && strcmp(node->key, key) != 0)
+	while (node != NULL)
+	{
+		if (strcmp(node->key, key) == 0)
+		{
+			return (node->value);
+		}
 		node = node->next;
-
-	return ((node == NULL) ? NULL : node->value);
+	}
+	return (NULL);
 }
