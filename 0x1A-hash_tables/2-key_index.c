@@ -5,7 +5,7 @@
  * @key: the key
  * @size: the size of the array of the hash table
  *
- * Return: he index at which the key/value pair
+ * Return: the index at which the key/value pair
  *		should be stored in the array of the hash table
 */
 
