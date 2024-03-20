@@ -7,7 +7,7 @@ RM: rm -rf
 all: $(SRC)
 	$(CC) $(SRC) -o $(NAME)
 
-%: %.o
+%.o: %.o
 	$(CC) -c $< -o $@
 
 	
