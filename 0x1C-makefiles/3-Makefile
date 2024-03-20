@@ -1,1 +1,22 @@
-#!/usr/bin/env bash
+CC: gcc
+SRC: main.c school.c
+OBJ: $(SRC:%.c=%.o)
+NAME: school
+RM: rm -rf
+
+all: $(SRC)
+	$(CC) $(SRC) -o $(NAME)
+
+%: %.o
+	$(CC) -c $< -o $@
+
+	
+clean:
+	$(RM) *~ $(NAME)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: oclean all
