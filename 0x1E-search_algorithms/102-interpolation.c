@@ -24,29 +24,31 @@ int interpolation_search(int *array, size_t size, int value)
 	lo = 0;
 	hi = size - 1;
 
-	while (array[mid] != value)
+while (size)
 	{
-
-		if (lo == hi || array[lo] == array[hi])
-			return (-1);
-
 		mid = lo + ((hi - lo) / (array[hi] - array[lo])) * (value - array[lo]);
-
-		printf("Value checked array[%ld]", mid);
+		printf("Value checked array[%d]", (int)mid);
 
 		if (mid >= size)
 		{
 			printf(" is out of range\n");
 			break;
 		}
-		printf(" = [%d]\n", array[mid]);
+		else
+		{
+			printf(" = [%d]\n", array[mid]);
+		}
 
 		if (array[mid] == value)
-			return (mid);
+			return ((int)mid);
+
 		if (array[mid] < value)
 			lo = mid + 1;
-		else if (array[mid] > value)
+		else
 			hi = mid - 1;
+
+		if (lo == hi)
+			break;
 	}
 	return (-1);
 }
