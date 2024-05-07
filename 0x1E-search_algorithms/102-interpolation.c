@@ -1,8 +1,8 @@
 #include "search_algos.h"
 
 /**
- * interpolation_search - a function that searches for a value in an array of integers
- *using the interpolation search algorithm
+ * interpolation_search - a function that searches for a value in an array
+ *of integers sing the interpolation search algorithm
  *
  * @array: is a pointer to the first element of the array to search in.
  * @size:  is the number of elements in array.
@@ -22,7 +22,6 @@ int interpolation_search(int *array, size_t size, int value)
 		return (-1);
 
 	lo = 0;
-	mid = -1;
 	hi = size - 1;
 
 	while (array[mid] != value)
@@ -40,26 +39,14 @@ int interpolation_search(int *array, size_t size, int value)
 			printf(" is out of range\n");
 			break;
 		}
-		else
-		{
-			printf(" = [%d]\n", array[mid]);
-		}
+		printf(" = [%d]\n", array[mid]);
 
 		if (array[mid] == value)
-		{
 			return (mid);
-		}
-		else
-		{
-			if (array[mid] < value)
-			{
-				lo = mid + 1;
-			}
-			else if (array[mid] > value)
-			{
-				hi = mid - 1;
-			}
-		}
+		if (array[mid] < value)
+			lo = mid + 1;
+		else if (array[mid] > value)
+			hi = mid - 1;
 	}
 	return (-1);
 }
