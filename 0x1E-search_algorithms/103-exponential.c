@@ -13,7 +13,7 @@
  *If value is not present or if array is NULL, your function must return -1
 */
 
-int binary_search_(int *array, size_t left, size_t right, int value)
+int _binary_search(int *array, size_t left, size_t right, int value)
 {
 	size_t j;
 
