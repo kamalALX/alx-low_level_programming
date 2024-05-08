@@ -13,40 +13,40 @@
 
 int advanced_binary(int *array, size_t size, int value)
 {
-    size_t left = 0;
-    size_t right = size - 1;
-    size_t result = -1;
+	size_t left = 0;
+	size_t right = size - 1;
+	size_t result = -1;
 	size_t i;
 
 	if (array == NULL || size == 0)
-        return (-1);
+		return (-1);
 
-    while (left <= right)
+	while (left <= right)
 	{
-        int mid = left + (right - left) / 2;
+		int mid = left + (right - left) / 2;
 
-        printf("Searching in array");
+		printf("Searching in array");
 
-        for (i = left; i <= right; i++)
+		for (i = left; i <= right; i++)
 		{
-            printf("%s %d", (i == left) ? ":" : ",", array[i]);
-        }
-        printf("\n");
+			printf("%s %d", (i == left) ? ":" : ",", array[i]);
+		}
+		printf("\n");
 
-        if (array[mid] == value)
+		if (array[mid] == value)
 		{
-            result = mid;
-            right = mid - 1;
-        }
+			result = mid;
+			right = mid - 1;
+		}
 		else if (array[mid] < value)
 		{
-            left = mid + 1;
-        }
+			left = mid + 1;
+		}
 		else
 		{
-            right = mid - 1;
-        }
-    }
+			right = mid - 1;
+		}
+	}
 
-    return (result);
+	return (result);
 }
