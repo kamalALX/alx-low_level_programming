@@ -19,7 +19,7 @@ int advanced_binary(int *array, size_t size, int value)
 	size_t i;
 
 	left = 0;
-	right = right - 1;
+	right = size - 1;
 	result = -1;
 
 	if (array == NULL || size == 0)
