@@ -18,7 +18,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	if (list == NULL || size == 0)
 		return (NULL);
 
-	pos = sqrt((double)size);
+	pos = (size_t)sqrt((double)size);
 	last = list;
 
 	while (last != NULL && value > last->n)
