@@ -13,10 +13,14 @@
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	size_t left = 0;
-	size_t right = size - 1;
-	size_t result = -1;
+	size_t left;
+	size_t right;
+	size_t result;
 	size_t i;
+
+	left = 0;
+	right = right - 1;
+	result = -1;
 
 	if (array == NULL || size == 0)
 		return (-1);
