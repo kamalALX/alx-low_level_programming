@@ -14,7 +14,7 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	size_t left;
 	size_t right;
-	size_t result;
+	int result;
 	size_t i;
 	int mid;
 
