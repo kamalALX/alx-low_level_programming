@@ -23,7 +23,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	index = 0;
 	k = 0;
 
-	while (last != NULL && value > last->n)
+	while (last->next && index < size && value > last->n)
 	{
 		first = last;
 		k++;
