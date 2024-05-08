@@ -4,7 +4,6 @@
  * advanced_binary - searches for a value in an array of
  * integers using the Binary search algorithm
  *
- *
  * @array: input array
  * @size: size of the array
  * @value: value to search in
@@ -17,6 +16,7 @@ int advanced_binary(int *array, size_t size, int value)
 	size_t right;
 	size_t result;
 	size_t i;
+	int mid;
 
 	left = 0;
 	right = size - 1;
@@ -27,7 +27,7 @@ int advanced_binary(int *array, size_t size, int value)
 
 	while (left <= right)
 	{
-		int mid = left + (right - left) / 2;
+		mid = left + (right - left) / 2;
 
 		printf("Searching in array");
 
