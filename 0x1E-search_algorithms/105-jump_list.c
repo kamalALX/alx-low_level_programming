@@ -26,6 +26,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	while (last != NULL && value > last->n)
 	{
 		first = last;
+		k++;
 		index = k * pos;
 		for (i = 0; last->next != NULL && i < pos; i++)
 		{
